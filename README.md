@@ -167,8 +167,8 @@ Smart-EnergyCalculator/
 🌍 Environmental Impact
 
 ![Impact]([https://raw.githubusercontent.com/risheekeshsingh/Smart-EnergyCalculator/main/image/6.png](https://github.com/risheekeshsingh/Smart-EnergyCalculator/blob/main/image/07.png))
-
-### 🗺️ Regional Map
+ 
+ 🗺️ Regional Map
 
 ![Map]([https://raw.githubusercontent.com/risheekeshsingh/Smart-EnergyCalculator/main/image/7.png](https://github.com/risheekeshsingh/Smart-EnergyCalculator/blob/main/image/09.png))
 
