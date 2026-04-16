@@ -1,15 +1,11 @@
-# ⚡ Smart Energy Calculator
-
+ ⚡ Smart Energy Calculator
 > A powerful, modern web application that intelligently calculates electricity consumption, estimates bills, and provides actionable energy-saving insights.
-
 🌐 Live Demo: https://smartenergycalculator.netlify.app/
 📂 GitHub Repo: https://github.com/risheekeshsingh/Smart-EnergyCalculator
 
----
+🧠 Project Vision
 
-## 🧠 Project Vision
-
-The **Smart Energy Calculator** is built to solve a real-world problem — helping users understand and optimize their electricity usage.
+The Smart Energy Calculator is built to solve a real-world problem — helping users understand and optimize their electricity usage.
 
 In today's world, where energy consumption is rising rapidly, this tool provides:
 
@@ -59,8 +55,6 @@ In today's world, where energy consumption is rising rapidly, this tool provides
 
 * Instant results with dynamic updates
 
----
-
 🔹 3. Appliance-wise Breakdown
 
 * Shows detailed energy usage per appliance
@@ -68,8 +62,6 @@ In today's world, where energy consumption is rising rapidly, this tool provides
 
   * High consumption devices
   * Optimization opportunities
-
----
 
 🔹 4. Smart Energy Suggestions
 
@@ -79,8 +71,6 @@ In today's world, where energy consumption is rising rapidly, this tool provides
   * Switching to efficient appliances
   * Better consumption habits
 
----
-
 🔹 5. Bill Breakdown Visualization
 
 * Animated output of:
@@ -88,8 +78,6 @@ In today's world, where energy consumption is rising rapidly, this tool provides
   * Total units
   * Total cost
   * Contribution of each appliance
-
----
 
 🔹 6. Solar Panel Recommendation (Advanced)
 
@@ -99,8 +87,6 @@ In today's world, where energy consumption is rising rapidly, this tool provides
   * Reduce dependency on grid
   * Move towards sustainable energy
 
----
-
 🔹 7. Modern UI/UX Experience
 
 * 🎨 Glassmorphism design
@@ -108,11 +94,9 @@ In today's world, where energy consumption is rising rapidly, this tool provides
 * 🎥 Video background login page
 * 🧩 Clean layout and responsive design
 
----
+ 🛠️ Tech Stack
 
-## 🛠️ Tech Stack
-
-### 💻 Frontend
+💻 Frontend
 
 * HTML5
 * CSS3 (Animations + Glass UI)
@@ -124,11 +108,7 @@ In today's world, where energy consumption is rising rapidly, this tool provides
 * Express.js
 * MongoDB / Firebase
 
-### 🌐 Deployment
-
-* Netlify
-
----
+🌐 Deployment
 
 📂 Project Structure
 
