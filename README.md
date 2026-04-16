@@ -1,5 +1,6 @@
  ⚡ Smart Energy Calculator
 > A powerful, modern web application that intelligently calculates electricity consumption, estimates bills, and provides actionable energy-saving insights.
+> 
 🌐 Live Demo: https://smartenergycalculator.netlify.app/
 > 
 📂 GitHub Repo: https://github.com/risheekeshsingh/Smart-EnergyCalculator
@@ -27,9 +28,8 @@ In today's world, where energy consumption is rising rapidly, this tool provides
 * 🎥 Video background login experience
 * 🌙 Clean, modern design (Glassmorphism inspired)
 
----
 
-## ✨ Features (Detailed)
+ ✨ Features (Detailed)
 
 🔹 1. Energy Consumption Calculator
 
