@@ -1,0 +1,210 @@
+/* Chatbot Isolated Styles */
+:root {
+    --chat-primary: #38bdf8;
+    --chat-bg: rgba(30, 41, 59, 0.95);
+    --chat-border: rgba(255, 255, 255, 0.1);
+    --chat-text: #f8fafc;
+    --chat-secondary-text: #94a3b8;
+    --chat-user-msg: #38bdf8;
+    --chat-ai-msg: rgba(255, 255, 255, 0.05);
+}
+
+/* Auto-detect theme based on h.html's data-theme attribute */
+html[data-theme="light"] {
+    --chat-primary: #0284c7;
+    --chat-bg: rgba(255, 255, 255, 0.98);
+    --chat-border: rgba(15, 23, 42, 0.1);
+    --chat-text: #0f172a;
+    --chat-secondary-text: #475569;
+    --chat-user-msg: #0284c7;
+    --chat-ai-msg: rgba(15, 23, 42, 0.05);
+}
+
+#chat-bot-launcher.hidden {
+    display: none !important;
+}
+
+#chat-bot-launcher {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 70px;
+    height: 70px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 50%;
+    overflow: hidden; /* This is crucial for the circular shape */
+}
+
+#chat-bot-launcher:hover {
+    transform: scale(1.1);
+}
+
+#chat-icon-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Changed from contain to ensure it fills the circle */
+    border-radius: 50%;
+    background: transparent;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
+#chat-bot-panel {
+    position: fixed;
+    bottom: 100px;
+    right: 25px;
+    width: 360px;
+    height: 500px;
+    background: var(--chat-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--chat-border);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    z-index: 9998;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+#chat-bot-panel.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.chat-header {
+    padding: 15px 20px;
+    background: var(--chat-primary);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.chat-close {
+    cursor: pointer;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.chat-messages::-webkit-scrollbar {
+    width: 5px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background: var(--chat-border);
+    border-radius: 10px;
+}
+
+.message {
+    padding: 10px 14px;
+    border-radius: 15px;
+    max-width: 80%;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.message.ai {
+    background: var(--chat-ai-msg);
+    color: var(--chat-text);
+    align-self: flex-start;
+    border: 1px solid var(--chat-border);
+}
+
+.message.user {
+    background: var(--chat-user-msg);
+    color: white;
+    align-self: flex-end;
+}
+
+.typing-indicator {
+    font-size: 0.8rem;
+    color: var(--chat-secondary-text);
+    padding: 5px 10px;
+    display: none;
+}
+
+.typing-indicator.visible {
+    display: block;
+}
+
+.chat-input-area {
+    padding: 15px;
+    border-top: 1px solid var(--chat-border);
+    display: flex;
+    gap: 10px;
+}
+
+.chat-input-area input {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--chat-border);
+    border-radius: 10px;
+    padding: 10px 15px;
+    color: var(--chat-text);
+    font-family: inherit;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.chat-input-area input:focus {
+    border-color: var(--chat-primary);
+}
+
+.chat-send-btn {
+    background: var(--chat-primary);
+    border: none;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.chat-send-btn:hover {
+    filter: brightness(1.1);
+}
+
+.chat-send-btn svg {
+    width: 18px;
+    height: 18px;
+    fill: white;
+}
+
+/* Responsiveness */
+@media (max-width: 480px) {
+    #chat-bot-panel {
+        width: 90%;
+        right: 5%;
+        bottom: 90px;
+        height: 70vh;
+    }
+}
